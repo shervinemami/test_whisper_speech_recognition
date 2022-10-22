@@ -30,3 +30,4 @@ For example, here are a set of options that takes around 2.5 seconds on my GPU f
 [Decoding Options:  DecodingOptions(task='transcribe', language='en', temperature=0.0, sample_len=None, best_of=None, beam_size=3, patience=1.3, length_penalty=None, prompt="Profiling ARM CPU and GPU cores in my 40's", prefix=None, suppress_blank=True, suppress_tokens='-1', without_timestamps=False, max_initial_timestamp=1.0, fp16=False) ]
 ```
 
+(See my longer message at [whisper#391](https://github.com/openai/whisper/discussions/391) ).
