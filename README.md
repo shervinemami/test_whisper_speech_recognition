@@ -15,16 +15,16 @@ Note that benchmark_whisper.py requires 2 audio files as arguments, to allow alt
 ## Example results:
 On my computer with a fast CPU and a slightly old "GTX 1660 Super" GPU with 6GB GDDR, here are some different results I get for different decoder options, all on the same "medium.en" model and "shervstest.wav" 10 second audio input:
 ```
-                                                         TIME:           GPU MEM USED:
-    "medium.en" model on GPU, FP32, GreedyDecoder:       1.1 seconds     5693 MiB GDDR
-    "medium.en" model on GPU, FP32, BestOf5Decoder:      2.5 seconds     5733 MiB GDDR
-    "medium.en" model on GPU, FP32, BeamSize3Decoder:    2.3 seconds     5733 MiB GDDR
-    "medium.en" model on GPU, FP32, BeamSize5Decoder:    3.9 seconds     5933 MiB GDDR
-    "medium.en" model on GPU, FP32, BeamSize7Decoder:    <crashed. 6GB is not enough GDDR for this!>
-    "medium.en" model on GPU, FP16, GreedyDecoder:       3.8 seconds     5693 MiB GDDR
-    "medium.en" model on GPU, FP16, BestOf5Decoder:      6.6 seconds     5733 MiB GDDR
-    "medium.en" model on GPU, FP16, BeamSize5Decoder:    8.3 seconds     5747 MiB GDDR
-    "medium.en" model on GPU, FP16, BeamSize7Decoder:    8.7 seconds     5921 MiB GDDR
+                                                     TIME:           GPU MEM USED:
+"medium.en" model on GPU, FP32, GreedyDecoder:       1.1 seconds     5693 MiB GDDR
+"medium.en" model on GPU, FP32, BestOf5Decoder:      2.5 seconds     5733 MiB GDDR
+"medium.en" model on GPU, FP32, BeamSize3Decoder:    2.3 seconds     5733 MiB GDDR
+"medium.en" model on GPU, FP32, BeamSize5Decoder:    3.9 seconds     5933 MiB GDDR
+"medium.en" model on GPU, FP32, BeamSize7Decoder:    <crashed. 6GB is not enough GDDR for this!>
+"medium.en" model on GPU, FP16, GreedyDecoder:       3.8 seconds     5693 MiB GDDR
+"medium.en" model on GPU, FP16, BestOf5Decoder:      6.6 seconds     5733 MiB GDDR
+"medium.en" model on GPU, FP16, BeamSize5Decoder:    8.3 seconds     5747 MiB GDDR
+"medium.en" model on GPU, FP16, BeamSize7Decoder:    8.7 seconds     5921 MiB GDDR
 ```
 
 Note that in my testing with a handful of 10 second English audio files, the `medium.en` model gave very accurate transcription no matter what decoder options I used, the accuracy seems to only change slightly while the speed varies significantly. So I'll personally be going with one the faster decoder options. Whereas using smaller models than `medium.en` (such as `base.en`) did start having a noticeable reduction in accuracy.
