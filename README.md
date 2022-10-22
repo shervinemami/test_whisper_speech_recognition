@@ -1,4 +1,5 @@
-Several simple scripts for experimenting with OpenAI's [whisper](https://github.com/openai/whisper) speech recognition dictation / transcription / translation library.
+Several simple scripts for experimenting with OpenAI's [whisper](https://github.com/openai/whisper) speech recognition dictation / transcription / translation library, either on x64 CPU or NVIDIA GPU.
+(Whisper can run on ARM CPUs such as Raspberry Pi, but it's extremely slow. Whisper can't run on AMD GPU / OpenCL, but could run on an AMD x64 CPU just like an Intel x64 CPU).
 
 ## Example commands:
 
